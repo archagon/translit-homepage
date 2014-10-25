@@ -1,0 +1,318 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Translit Keyboard</title>
+    <meta name="description" content="Translit Keyboard">
+    <meta name="author" content="Archagon">
+
+    <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+</head>
+
+<style type="text/css">
+
+/*//////////
+// GLOBAL //
+//////////*/
+
+/* global box sizing */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/*////////
+// BODY //
+////////*/
+
+body {
+    margin: 0 auto 0 auto;
+    /*width: 60em;*/
+    border: pink 10px solid;
+    font-family: 'Helvetica', 'Arial', sans-serif;
+}
+
+body {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column
+}
+
+article > * {
+    margin-bottom: 3em;
+}
+article > :last-child {
+    margin-bottom: 0; 
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 0.5em;
+    font-size: 3em;
+}
+
+p {
+    font-size: 1.15em;
+}
+
+/*/////////
+// TITLE //
+/////////*/
+
+#title {
+    text-align: center;
+}
+
+#title h1 {
+    font-size: 4em;
+}
+
+#title p {
+    font-size: 1.25em;
+}
+
+/*//////////////////////////
+// SHOWCASE SECTION SETUP //
+//////////////////////////*/
+
+/* showcase area flexbox */
+#showcase {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+/* spacing between showcase sections */
+#showcase > * {
+    margin-right: 3em;
+}
+#showcase > :last-child {
+    margin-right: 0; 
+}
+
+/* showcase sections do not shrink */
+#showcase > * {
+    -webkit-flex-shrink: 0;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+}
+
+/* manual widths for sections */
+#demo {
+    width: 368px;
+}
+#app {
+    width: 17em;
+}
+
+#demo {
+    position: relative; 
+}
+
+#demo > video {
+    width: 320px;
+    position: absolute;
+    left: 26px;
+    top: 105px;
+}
+
+/*////////////////////////////////
+// SHOWCASE VIDEO SECTION SETUP //
+////////////////////////////////*/
+
+/* iPhone image fills entire box */
+#demo img {
+    width: 100%;
+}
+
+/*////////////////////////////////////
+// SHOWCASE ICON LINK SECTION SETUP //
+////////////////////////////////////*/
+
+/* the app store icon section is a vertical flexbox */
+#app {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+
+    -webkit-justify-content: space-around;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column
+}
+
+/* right section styling */
+#app {
+    border-radius: 3.5em;
+    border: lightblue 0.5em solid;
+    padding: 1em;
+}
+
+/* right side images are centered and on separate lines */
+#app img {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+/* app icon sizing */
+.icon {
+    width: 12em;
+    max-width: 100%;
+}
+
+/* text styling */
+#app {
+    text-align: center;
+}
+#app h1 {
+    margin: 0.3em 0 0.3em 0;
+    font-size: 1.35em;
+}
+#app p {
+    margin: 0.3em 0 0.3em 0;
+}
+
+#app > * {
+    /*border: red 5px solid;*/
+}
+
+/*////////////
+// FEATURES //
+////////////*/
+
+#feature_blurbs {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+
+    -webkit-justify-content: space-around;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+}
+
+#feature_blurbs > * {
+    margin: 2em 0 2em 0;
+    width: 24em;
+    text-align: center;
+}
+
+</style>
+
+<body>
+    <header>
+        <p>This is the header!</p>
+    </header>
+
+    <article>
+        <section id="title">
+            <h1>Translit Keyboard</h1>
+            <p>This is the intro paragraph! Enjoy!</p>
+        </section>
+
+        <section id="showcase">
+            <section id="demo">
+                <img class="device-background" src="apple-iphone-5s.svg" />
+                <video id="screen" controls preload onplaying="this.controls=false" loop autoplay>
+                    <source src="DemoScreencast.mov" type="video/mp4">
+                </video>
+            </section>
+
+            <section id="app">
+                <div id="premium">
+                    <img class="icon" src="Icon.png" />
+                    <h1>Translit Keyboard</h1>
+                    <img src="download_badge.svg" />
+                    <p>Featuring Russian, Ukrainian, Albanain, Belarusian, Bulgarian, Georgian, and Macedonian languages.</p>
+                </div>
+                <hr>
+                <div id="lite">
+                    <img class="icon" src="Icon-Lite.png" />
+                    <h1>Translit Keyboard Lite</h1>
+                    <img src="download_badge.svg" />
+                    <p>Or give the keyboard a free spin with Old Slavonic!</p>
+                </div>
+            </section>
+        </section>
+
+        <hr>
+
+        <section id="features">
+            <h1>Features</h1>
+
+            <div id="feature_blurbs">
+                <div class="feature">
+                    <img src="Screenshot.png" />
+                    <h2>System Keyboard</h2>
+                    <p>Multiple languages are supported for transliteration. With the premium app, you get Russian, blah, blah, blah, blah. Or you can try the Lite app with Old Slavonic.</p>
+                </div>
+
+                <div class="feature">
+                    <img src="Screenshot.png" />
+                    <h2>Immediate Transliteration</h2>
+                    <p>Multiple languages are supported for transliteration. With the premium app, you get Russian, blah, blah, blah, blah. Or you can try the Lite app with Old Slavonic.</p>
+                </div>
+
+                <div class="feature">
+                    <img src="Screenshot.png" />
+                    <h2>Multiple Languages</h2>
+                    <p>Multiple languages are supported for transliteration. With the premium app, you get Russian, blah, blah, blah, blah. Or you can try the Lite app with Old Slavonic.</p>
+                </div>
+
+                <div class="feature">
+                    <img src="Screenshot.png" />
+                    <h2>Your Privacy Protected</h2>
+                    <p>Multiple languages are supported for transliteration. With the premium app, you get Russian, blah, blah, blah, blah. Or you can try the Lite app with Old Slavonic.</p>
+                </div>
+            </div>
+        </section>
+
+        <hr>
+
+        <section id="technical">
+            <h1>Links</h1>
+
+            <p>This keyboard is based on a simplified recreation of the official iOS system keyboard that I open-sourced. The keyboard is written entirely in Swift and can be found <a href="">here</a>.</p>
+
+            <p>I will be writing an article about the troubles and turmoils of writing an iOS 3rd-party keyboard. You'll be able to find it on my <a href="http://beta-blog.archagon.net">blog</a> when I publish it.</p>
+
+            <p>You can find the source code for an OSX version of the transliterator on this Github page. It installs as an input method — essentially, a system keyboard — and works pretty much flawlessly. You'll have to compile it yourself, though (unless enough people ask for it).</p>
+
+            <p>Finally, you can find the privacy policy <a href="">here</a>.</p>
+        </section>
+    </article>
+</body>
+
+</html>

@@ -1,0 +1,184 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Translit Keyboard</title>
+    <meta name="description" content="Translit Keyboard">
+    <meta name="author" content="Archagon">
+
+    <!-- <link rel="stylesheet" href="css/styles.css?v=1.0"> -->
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+
+    <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+</head>
+
+<style>
+    /*html {
+        box-sizing: border-box;
+    }
+    *, *:before, *:after {
+        box-sizing: inherit;
+    }
+
+    .demo {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .device-background {
+        fill: red;
+    }
+
+    .device > img {
+        width: 369px;
+    }*/
+
+    .device > video {
+        /*position: absolute;*/
+        /*width: 320px;*/
+        /*left: 27px;*/
+        /*top: 140px;*/
+    }
+
+/*    .demo, .apps {
+        display: inline-block;
+    }
+
+    .demo {
+        background-color: blue;
+    }
+
+    .apps {
+        background-color: red;
+    }
+
+    .apps {
+        border: black 5px solid;
+        border-radius: 50px;
+        padding: 20px;
+        width: 369px;
+        height: 786px;
+    }*/
+</style>
+
+<style type="text/css">
+/*    body {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 1000px;
+    }
+    */
+
+    .container-fluid {
+        max-width: 1000px;
+    }
+    .app div {
+        display: inline-block;
+    }
+    .feature {
+        border: 5px black;
+        border-color: black;
+        border-radius: 10px;
+        /*background-color: red;*/
+        /*height: 350px;*/
+        padding: 10px;
+    }
+    .feature img {
+        width: 200px;
+    }
+    .top-margin {
+        margin-bottom: 20px;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <header class="navbar navbar-fixed-top">
+            <a href="http://www.archagon.net">Archagon.net</a>
+        </header>
+
+        <h1 class="text-center">Translit Keyboard</h1>
+
+        <p>Do you often type in another language but find yourself looking down at your phone whenever you switch away from the QWERTY English keyboard? Transliteration is the solution to your problem! Instead of having to memorize multiple keyboard layouts, simply type things out phonetically.</p> 
+
+        <div class="row top-margin">
+            <section class="demo text-center">
+                <div class="device">
+                    <!-- <video id="screen" controls preload onplaying="this.controls=false" loop autoplay>
+                        <source src="DemoScreencast.mov" type="video/mp4">
+                    </video> -->
+                    <img class="device-background" src="apple-iphone-5s.svg" width="320"/>
+                </div>
+            </section>
+        </div>
+
+        <div class="row top-margin">
+            <section class="app text-center">
+                <div class="premium">
+                    <img style="width: 200px" src="Icon.png" />
+                </div>
+                <div class="lite">
+                    <img style="width: 200px" src="Icon-Lite.png" />
+                </div>
+            </section>
+        </div>
+
+        <div class="row top-margin">
+            <section class="feature text-center vcenter col-md-4 col-md-offset-1">
+                <img src="Screenshot.png" />
+                <h2>Live Transliteration</h2>
+                <p>Don't wait to transliterate! Just start typing and watch the transliteration happen in real time. There's no button pushing and no extra work. And if you need to switch back to English, simply hit the toggle at the top of your keyboard and type away. You can always consult the transliteration mappings for your language in the container app.</p>
+            </section>
+
+            <section class="feature text-center vcenter col-md-4 col-md-offset-2">
+                <img src="Screenshot.png" />
+                <h2>3rd Party Keyboard</h2>
+                <p>Translit Keyboard is a fully integrated iOS system keyboard. This means that you can use it in practically <em>any</em> app (with a few exceptions). Text your friends; browse the web; write down your babushka's recipies, all in the original language.</p>
+            </section>
+        </div>
+
+        <div class="row top-margin">
+            <section class="feature text-center vcenter col-md-4 col-md-offset-1">
+                <img src="Screenshot.png" />
+                <h2>Multiple Languages</h2>
+                <p>Multiple languages are supported for transliteration. With the premium app, you get Russian, blah, blah, blah, blah. Or you can try the Lite app with Old Slavonic.</p>
+            </section>
+
+            <section class="feature text-center vcenter col-md-4 col-md-offset-2">
+                <img src="Screenshot.png" />
+                <h2>Full Privacy</h2>
+                <p>With Translit Keyboard, you can be sure that your privacy is never violated. The app is intentionally made to never request full acess to your data, meaning that nothing you do in the keyboard is ever available to me, the developer. You can find the full privacy policy here.</p>
+            </section>
+        </div>
+
+        <div class="row top-margin">
+            <section class="col-md-8 col-md-offset-2">
+                <h2>Technical Stuff</h2>
+                <p>Here's a link to the open source project behind this. Here's my dev blog. Here's an article about how much 3rd party keyboard development is wonky now.</p>
+            </section>
+        </div>
+
+        <section class="row top-margin">
+            <section class="col-md-8 col-md-offset-2">
+                <h2>Extras</h2>
+                <p>Here's the transliterator for the OSX platform.</p>
+            </section>
+        </section>
+    </div>
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+</body>
+
+</html>
