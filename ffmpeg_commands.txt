@@ -1,0 +1,2 @@
+ffmpeg -i test.mp4 -pix_fmt rgb24 -r 30 output.gif
+ffmpeg -i DemoScreencast.mov -an -vf scale=320:-1 test.mp4

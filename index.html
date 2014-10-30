@@ -3,39 +3,112 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Translit Keyboard</title>
     <meta name="description" content="Translit Keyboard">
     <meta name="author" content="Archagon">
 
-    <link rel="stylesheet" href="css/styles.css?v=1.0">
-
     <!--[if lt IE 9]>
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
+
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <p><center><h1>Translit Keyboard</h1></center></p>
+    <!-- <header>
+        <ul>
+            <li>Back to <a href="http://beta-blog.archagon.net">Archagon.net<a/></li>
+        </ul>
+    </header> -->
 
-    <p>
-    <center>
-        <img style="width: 200px" src="/Icon.png"></img>
-        <img style="width: 200px" src="/Icon-Lite.png"></img>
-    </center>
-    </p>
+    <article>
+        <section id="title">
+            <h1>Translit Keyboard</h1>
+            <p>Transliteration is the mapping of one alphabet to another. Do you need to type in another language on your iPhone — Russian, for instance — but find yourself struggling with the native keyboard? Translit Keyboard lets you type using the same old QWERTY keyboard you're used to, but converts the output straight to the alphabet of your choice!</p>
+        </section>
 
-    <center>
-    <p style="width: 800px">With Translit Keyboard, you don't have to spend months learning a new keyboard layout for a langauge with a different alphabet. Simply type out the characters phonetically and watch them appear on your screen!</p>
+        <section id="showcase">
+            <section id="demo">
+                <img class="device-background" src="apple-iphone-5s.svg" />
+                <video id="screen" controls preload onplaying="this.controls=false" loop autoplay>
+                    <source src="demo.mp4" type="video/mp4">
+                </video>
+            </section>
 
-    <p>Currently supported languages: <b>Russian, Ukrainian, Belarusian, Georgian, Macedonian, Armenian, Greek</b></p>
-    <p>and...</p>
-    <p><b>Old Slavonic</b>!
-    </center>
+            <section id="app">
+                <div id="premium">
+                    <a href="http://itunes.apple.com/app/id928742619">
+                        <img class="icon" style="width:12em" src="Icon.png" />
+                        <h1>Translit Keyboard</h1>
+                        <p class="description">Russain, Ukranian, Armenian, Belarusian, Georgian, Greek, and Macedonian</p>
+                        <img class="badge" style="width:8em" src="download_badge.svg" />
+                    </a>
+                </div>
 
-    <center>
-        <p><a href="/privacy.html">Privacy Policy</a></p>
-    </center>
+                <div id="lite">
+                    <a href="http://itunes.apple.com/app/id931305272">
+                        <img class="icon" style="width:12em" src="Icon-Lite.png" />
+                        <h1>Translit Keyboard Lite</h1>
+                        <p class="description">Old Salvonic</p>
+                        <img class="badge" style="width:8em" src="download_badge.svg" />
+                    </a>
+                </div>
+            </section>
+        </section>
+
+        <hr>
+
+        <section id="features">
+            <h1>Features</h1>
+
+            <div id="feature_blurbs">
+                <div class="feature">
+                    <img src="screenshot_system_keyboard.png" />
+                    <h2>3rd Party System Keyboard</h2>
+                    <p>Translit Keyboard is a 3rd party system keyboard. Use it from almost any app: Safari, Mail, Messages, Notes — wherever transliteration is needed the most.</p>
+                </div>
+
+                <div class="feature">
+                    <img src="screenshot_instant.png" />
+                    <h2>Immediate Transliteration</h2>
+                    <p>You don't have to wait or push any buttons for transliteration to complete. The transliteration appears as you type, updating as needed. (And if you need to type in English again, you can switch it right off.)</p>
+                </div>
+
+                <div class="feature">
+                    <img src="screenshot_languages.png" />
+                    <h2>Multiple Languages</h2>
+                    <p>With the premium version, you can transliterate into Russain, Ukranian, Armenian, Belarusian, Georgian, Greek, and Macedonian. Or you can try the Lite version with Old Slavonic if you want to see how it all works!</p>
+                </div>
+
+                <div class="feature">
+                    <img src="screenshot_privacy.png" />
+                    <h2>Your Privacy Protected</h2>
+                    <p>None of your keystrokes are ever saved or sent over the network. In fact, the iOS privacy settings chosen for the app guarantee this.</p>
+                </div>
+            </div>
+        </section>
+
+        <hr>
+
+        <section id="links">
+            <h1>Links</h1>
+
+            <p><strong>If you have any questions or bugs to report, please e-mail me at <a href="mailto:translit-keyboard@archagon.net">translit-keyboard@archagon.net</a>.</strong></p>
+
+            <p>This keyboard is built on a simplified recreation of the official iOS system keyboard that I have open-sourced. The keyboard is written entirely in Swift and can be found <a href="https://github.com/archagon/tasty-imitation-keyboard">here</a>.</p>
+
+            <p>You can find the source code for an unpolished OSX version of the transliterator <a href="https://github.com/archagon/cyrillic-transliterator">here</a>. It installs as an "input method" — a special keyboard layout you can add in your language settings — and in my experience works without error. At the moment, it only supports transliteration to Russian. Since I'm not currently charging for it, I can't provide you with much support.</p>
+
+            <p>Finally, you can find the privacy policy <a href="privacy.html">here</a>.</p>
+        </section>
+    </article>
+
+    <footer>
+        <p>Copyright © Alexei Baboulevitch ("Archagon") 2014.
+    </footer>
 </body>
 
 </html>

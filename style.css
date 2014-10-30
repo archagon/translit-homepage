@@ -1,0 +1,390 @@
+/*//////////
+// GLOBAL //
+//////////*/
+
+/* global box sizing */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+@media screen and (max-width: 720px) {
+    html {
+        font-size: 10px;
+    }
+}
+
+section {
+    /*margin-bottom: 3em;*/
+}
+hr {
+    /*padding: 0;
+    margin: 0;
+    line-height: 0;*/
+    margin: 2em 0 2em 0;
+}
+#title h1 {
+    margin: 0;
+}
+#features h1 {
+    margin: 0;   
+}
+#links h1 {
+    margin: 0;
+}
+
+/*////////
+// BODY //
+////////*/
+
+body {
+    margin: 0 auto 0 auto;
+    /*width: 60em;*/
+    font-family: 'Helvetica', 'Arial', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Helvetica Neue', 'Arial', sans-serif;
+}
+
+body {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+/*article > section {
+    padding-bottom: 32em;
+}
+article > :last-child {
+    margin-bottom: 0; 
+}*/
+
+h1 {
+    text-align: center;
+    margin-bottom: 0.5em;
+    font-size: 3em;
+}
+
+p {
+    font-size: 1.15em;
+}
+
+article {
+    padding-top: 2em;
+    margin-left: 1em;
+    margin-right: 1em;
+}
+
+/*/////////
+// TITLE //
+/////////*/
+
+#title {
+    text-align: center;
+    max-width: 40em;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 3em;
+}
+
+#title h1 {
+    font-size: 3em;
+}
+
+#title p {
+    font-size: 120%;
+}
+
+/*//////////////////////////
+// SHOWCASE SECTION SETUP //
+//////////////////////////*/
+
+/*#showcase {
+    margin: 0 0.5em 0 0.5em;
+}*/
+
+/* showcase area flexbox */
+#showcase {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+/* spacing between showcase sections */
+#showcase > * {
+    margin-right: 3em;
+}
+#showcase > :last-child {
+    margin-right: 0; 
+}
+
+/* showcase sections do not shrink */
+#showcase > * {
+    -webkit-flex-shrink: 0;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+}
+
+/* manual widths for sections */
+#demo {
+    width: 23em;
+}
+#app {
+    width: 17em;
+}
+
+#demo {
+    position: relative; 
+}
+
+#demo > video {
+    width: 20em;
+    position: absolute;
+    left: 1.625em;
+    top: 6.5625em;
+}
+
+/*////////////////////////////////
+// SHOWCASE VIDEO SECTION SETUP //
+////////////////////////////////*/
+
+/* iPhone image fills entire box */
+#demo img {
+    width: 100%;
+}
+
+/*////////////////////////////////////
+// SHOWCASE ICON LINK SECTION SETUP //
+////////////////////////////////////*/
+
+/* the app store icon section is a vertical flexbox */
+#app {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+
+    /*-webkit-justify-content: space-around;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;*/
+
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+#app h1 {
+    font-size: 1em;
+    font-weight: 400;
+}
+
+#app p {
+    font-weight: 100;
+    font-size: 1em;
+}
+
+#app a {
+    text-decoration: none;
+    color: inherit;
+}
+
+#app > * {
+    border-radius: 3.5em;
+    /*border: lightblue 0.4em solid;*/
+    padding: 1em;
+    position: relative;
+}
+
+#premium {
+    /*background-color: #C7F2FF;*/
+    background-color: lightblue;
+    color: navy;
+}
+
+#lite {
+    /*background-color: #C3FFC3;*/
+    background-color: lightgreen;
+    color: darkgreen;
+}
+
+#app .description {
+    margin-bottom: 3.5em;
+}
+
+#app .badge {
+    position: absolute;
+    bottom: 1em;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+}
+
+#premium {
+    margin-bottom: 1em;
+}
+
+/* right side images are centered and on separate lines */
+#app img {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+/* text styling */
+#app {
+    text-align: center;
+}
+#app h1 {
+    margin: 0.3em 0 0.3em 0;
+    font-size: 1.35em;
+}
+#app p {
+    margin: 0.3em 0 0.3em 0;
+}
+
+@media screen and (max-width: 480px) {
+    #showcase {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column
+    }
+
+    #app {
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+        flex-direction: row;
+    }
+
+    #app {
+        -webkit-box-ordinal-group: 1;
+        -webkit-order: 0;
+        -ms-flex-order: 0;
+        order: 0;
+    }
+
+    #demo {
+        -webkit-box-ordinal-group: 2;
+        -webkit-order: 1;
+        -ms-flex-order: 1;
+        order: 1;
+
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #app {
+        margin-bottom: 2em;
+    }
+
+    #app {
+       width: 100%;
+    }
+
+    #app > * {
+        width: 0;
+
+        -webkit-box-flex: 1;
+        -webkit-flex-grow: 1;
+        -ms-flex-positive: 1;
+        flex-grow: 1;
+    }
+
+    #premium {
+        margin-bottom: 0;
+        margin-right: 0.5em;
+    }
+}
+
+/*////////////
+// FEATURES //
+////////////*/
+
+#feature_blurbs {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+
+    -webkit-justify-content: space-around;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+}
+
+#feature_blurbs > * {
+    margin: 2em 0 2em 0;
+    width: 24em;
+    text-align: center;
+}
+
+/*#feature_blurbs img {
+    width: 15em;
+}*/
+
+.feature > img {
+    width: 65%;
+    box-shadow: 0 0.1875em 0.5em #CCCCCC;
+}
+
+/*/////////
+// LINKS //
+/////////*/
+
+#links {
+    padding-left: 2em;
+    padding-right: 2em;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 70em;
+}
+
+#links a {
+    white-space: nowrap;
+}
+
+/*//////////
+// FOOTER //
+//////////*/
+
+footer {
+    text-align: center;
+    font-size: 85%;
+    color: gray;
+    padding: 0em;
+}
