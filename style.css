@@ -10,29 +10,11 @@ html {
   box-sizing: inherit;
 }
 
+/* shrink fonts past estimated mobile threshhold */
 @media screen and (max-width: 720px) {
     html {
         font-size: 10px;
     }
-}
-
-section {
-    /*margin-bottom: 3em;*/
-}
-hr {
-    /*padding: 0;
-    margin: 0;
-    line-height: 0;*/
-    margin: 2em 0 2em 0;
-}
-#title h1 {
-    margin: 0;
-}
-#features h1 {
-    margin: 0;   
-}
-#links h1 {
-    margin: 0;
 }
 
 /*////////
@@ -41,37 +23,18 @@ hr {
 
 body {
     margin: 0 auto 0 auto;
-    /*width: 60em;*/
-    font-family: 'Helvetica', 'Arial', sans-serif;
-}
-
-h1, h2, h3, h4, h5, h6 {
-    font-family: 'Helvetica Neue', 'Arial', sans-serif;
 }
 
 body {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
+    font-family: 'Helvetica', 'Arial', sans-serif;
 }
 
-/*article > section {
-    padding-bottom: 32em;
-}
-article > :last-child {
-    margin-bottom: 0; 
+/*h1, h2, h3, h4, h5, h6 {
+    font-family: 'Helvetica', 'Arial', sans-serif;
 }*/
 
 h1 {
     text-align: center;
-    margin-bottom: 0.5em;
     font-size: 3em;
 }
 
@@ -79,10 +42,22 @@ p {
     font-size: 1.15em;
 }
 
+/*///////////
+// ARTICLE //
+///////////*/
+
 article {
     padding-top: 2em;
     margin-left: 1em;
     margin-right: 1em;
+}
+
+hr {
+    margin: 2em 0 2em 0;
+}
+
+section > h1 {
+    margin: 0;
 }
 
 /*/////////
@@ -91,7 +66,9 @@ article {
 
 #title {
     text-align: center;
-    max-width: 40em;
+    max-width: 44em;
+    padding-left: 2em;
+    padding-right: 2em;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 3em;
@@ -108,10 +85,6 @@ article {
 /*//////////////////////////
 // SHOWCASE SECTION SETUP //
 //////////////////////////*/
-
-/*#showcase {
-    margin: 0 0.5em 0 0.5em;
-}*/
 
 /* showcase area flexbox */
 #showcase {
@@ -148,26 +121,26 @@ article {
 
 /* manual widths for sections */
 #demo {
-    width: 23em;
+    width: 22.9em;
 }
 #app {
     width: 17em;
 }
 
+/*////////////////////////////////
+// SHOWCASE VIDEO SECTION SETUP //
+////////////////////////////////*/
+
+/* underlay positioning */
 #demo {
     position: relative; 
 }
-
-#demo > video {
+#demo > video, #demo > .placeholder {
     width: 20em;
     position: absolute;
     left: 1.625em;
     top: 6.5625em;
 }
-
-/*////////////////////////////////
-// SHOWCASE VIDEO SECTION SETUP //
-////////////////////////////////*/
 
 /* iPhone image fills entire box */
 #demo img {
@@ -201,14 +174,20 @@ article {
     flex-direction: column;
 }
 
+#app {
+    text-align: center;
+}
+
 #app h1 {
-    font-size: 1em;
-    font-weight: 400;
+    font-size: 1.45em;
+    font-weight: 500;
+    margin: 0.7em 0 0.3em 0;
 }
 
 #app p {
     font-weight: 100;
     font-size: 1em;
+    margin: 0.3em 0 0.3em 0;
 }
 
 #app a {
@@ -235,10 +214,10 @@ article {
     color: darkgreen;
 }
 
+/* badge positioning from the bottom */
 #app .description {
     margin-bottom: 3.5em;
 }
-
 #app .badge {
     position: absolute;
     bottom: 1em;
@@ -259,18 +238,7 @@ article {
     display: block;
 }
 
-/* text styling */
-#app {
-    text-align: center;
-}
-#app h1 {
-    margin: 0.3em 0 0.3em 0;
-    font-size: 1.35em;
-}
-#app p {
-    margin: 0.3em 0 0.3em 0;
-}
-
+/* overrides for when screen is too small to show side by side */
 @media screen and (max-width: 480px) {
     #showcase {
         -webkit-box-orient: vertical;
@@ -314,12 +282,7 @@ article {
     }
 
     #app > * {
-        width: 0;
-
-        -webkit-box-flex: 1;
-        -webkit-flex-grow: 1;
-        -ms-flex-positive: 1;
-        flex-grow: 1;
+        width: 17em;
     }
 
     #premium {
@@ -353,10 +316,6 @@ article {
     text-align: center;
 }
 
-/*#feature_blurbs img {
-    width: 15em;
-}*/
-
 .feature > img {
     width: 65%;
     box-shadow: 0 0.1875em 0.5em #CCCCCC;
@@ -383,6 +342,7 @@ article {
 //////////*/
 
 footer {
+    margin-top: 3em;
     text-align: center;
     font-size: 85%;
     color: gray;
